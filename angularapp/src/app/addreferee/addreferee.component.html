@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3>
+        Create Referee
+    </h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Id no</label>
+            <input type="text" class="form-control" id="id"
+                [(ngModel)] = "referee.id" name = "id">
+        </div>
+        <div class="form-group">
+            <label> Referee Name</label>
+            <input type="text" class="form-control" id="refereeName"
+                [(ngModel)] = "referee.refName" name="Ref Name">
+        </div>
+        <div class="form-group">
+            <label> Referee Url</label>
+            <input type="text" class="form-control" id="refereeUrl"
+                [(ngModel)] = "referee.refUrl" name="Ref Url">
+        </div>
+        <div class="form-group">
+            <label> No of matches</label>
+            <input type="text" class="form-control" id="matches"
+                [(ngModel)] = "referee.noofMatches" name="no of matches">
+        </div>
+        <button class="btn btn-success" type="submit">
+            <label>submit</label>
+        </button>
+        
+    </form>
+    </div>
