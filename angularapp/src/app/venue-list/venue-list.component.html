@@ -1,0 +1,28 @@
+<h2>Venue List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Venue Name</th>
+            <th>Venue Image Url</th>
+            <th>Venue Location</th>
+            <th>Venue Description</th>
+            <th>Venue Capacity</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let venue of venues">
+            <td>{{venue.venueName}}</td>
+            <td>{{venue.venueImageUrl}}</td>
+            <td>{{venue.venueLocation}}</td>
+            <td>{{venue.venueDescription}}</td>
+            <td>{{venue.venueCapacity}}</td>
+            <td>
+                <button (click) = "updateVenue(venue.venueId)" class="btn btn-info">Update</button>
+                <button (click) = "deleteVenue(venue.venueId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <button (click) = "venueDetails(venue.venueId)" class="btn btn-info" style="margin-left: 10px">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
