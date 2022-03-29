@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Teams Details </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Team Name</label>
+            <input type="text" class ="form-control" id = "firstName"
+                [(ngModel)] = "employee.firstName" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label>No of Players</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "employee.lastName" name = "lastName">
+        </div>
+    
+        <div class="form-group">
+            <label> Team Location</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "employee.emailId" name = "emailId">
+        </div>
+        <div class="form-group">
+            <label>Team Image Url</label>
+            <input type="url" class = "form-control" id="emailId"
+             [(ngModel)]="employee.urllink" name = "urllink">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div>
