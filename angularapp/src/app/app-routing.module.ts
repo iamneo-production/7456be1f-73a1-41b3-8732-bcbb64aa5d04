@@ -1,13 +1,14 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddrefereeComponent } from './addreferee/addreferee.component';
-import { RefereeListComponent } from './referee-list/referee-list.component';
-import { UpdateRefereeComponent } from './update-referee/update-referee.component';
+import { AdminrefereeComponent } from './admin/adminreferee/adminreferee.component';
+import { EditrefereeComponent } from './admin/adminreferee/editreferee/editreferee.component';
+import { RefereeComponent } from './admin/adminreferee/referee/referee.component';
+import { AuthGuard } from './services/auth.guard';
+
 const routes: Routes = [
-  {path : 'add-referee', component :  AddrefereeComponent},
-  {path : 'view-referee' , component : RefereeListComponent},
-  {path: 'update-referee/:id',component : UpdateRefereeComponent},
-  {path : '' , component: AddrefereeComponent}
+  { path: 'admin/referee', component: AdminrefereeComponent, canActivate: [AuthGuard] },
+  { path: 'admin/addReferee', component: RefereeComponent, canActivate: [AuthGuard] },
+  { path: 'admin/editreferee/:id', component: EditrefereeComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 package com.examly.springapp.model;
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,51 +7,75 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Referee")
+@Table(name="Referee")
 public class Referee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private  long id;
-	@Column(name="Name")
-	private String RefName;
-	@Column(name="NoOfMatches")
-	private int noofMatches;
-	@Column(name="RefUrl")
-	private String RefUrl;
-	
+	private int id;
+	private String RefereeName;
+	private String ContactNumber;
+	private String ImageUrl;
+	private String Email;
+	private String Country;
+	private String Description;
 	public Referee() {
 		
 	}
-	public Referee(String refName, int noofMatches, String refUrl) {
+	public Referee(int id,String referreName,String contactNumber, String imageUrl, String email, String country,
+			String description) {
 		super();
-		RefName = refName;
-		this.noofMatches = noofMatches;
-		RefUrl = refUrl;
+		this.id=id;
+		RefereeName=referreName;
+		ContactNumber=contactNumber;
+		ImageUrl=imageUrl;
+		Email=email;
+		Country=country;
+		Description=description;
 	}
-	public long getId() {
+	
+	public int getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	public String getRefName() {
-		return RefName;
+	public String getRefereeName() {
+		return RefereeName;
 	}
-	public void setRefName(String refName) {
-		RefName = refName;
+	public void setRefereeName(String refereeName) {
+		RefereeName = refereeName;
 	}
-	public int getNoofMatches() {
-		return noofMatches;
+	public String getContactNumber() {
+		return ContactNumber;
 	}
-	public void setNoofMatches(int noofMatches) {
-		this.noofMatches = noofMatches;
+	public void setContactNumber(String contactNumber) {
+		ContactNumber = contactNumber;
 	}
-	public String getRefUrl() {
-		return RefUrl;
+	public String getImageUrl() {
+		return ImageUrl;
 	}
-	public void setRefUrl(String refUrl) {
-		RefUrl = refUrl;
+	public void setImageUrl(String imageUrl) {
+		ImageUrl = imageUrl;
 	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public String getCountry() {
+		return Country;
+	}
+	public void setCountry(String country) {
+		Country = country;
+	}
+	public String getDescription() {
+		return Description;
+	}
+	public void setDescription(String description) {
+		Description = description;
+	}
+	
 	
 
 }
