@@ -1,29 +1,45 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VenueListComponent } from './venue-list/venue-list.component';
-import { CreateVenueComponent } from './create-venue/create-venue.component';
-import { FormsModule } from '@angular/forms';
-import { UpdateVenueComponent } from './update-venue/update-venue.component';
-import { VenueDetailsComponent } from './venue-details/venue-details.component';
+
+import { AdminvenueComponent } from './admin/adminvenue/adminvenue.component';
+
+import { VenueComponent } from './admin/adminvenue/venue/venue.component';
+import { EditvenueComponent } from './admin/adminvenue/editvenue/editvenue.component';
+
+
+import { VenueService } from './service/venue.service';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    VenueListComponent,
-    CreateVenueComponent,
-    UpdateVenueComponent,
-    VenueDetailsComponent
+    
+    AdminvenueComponent,
+    
+    VenueComponent,
+    EditvenueComponent,
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
-  providers: [],
+  providers: [
+    
+     
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
